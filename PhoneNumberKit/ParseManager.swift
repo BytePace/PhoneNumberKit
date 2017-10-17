@@ -75,7 +75,7 @@ final class ParseManager {
             throw PhoneNumberError.notANumber
         }
         // Finalize remaining parameters and create phone number object (9)
-        let leadingZero = nationalNumber.hasPrefix("0")
+        let leadingZero = normalizedNationalNumber.hasPrefix("0")
         guard let finalNationalNumber = UInt64(nationalNumber) else{
             throw PhoneNumberError.notANumber
         }
